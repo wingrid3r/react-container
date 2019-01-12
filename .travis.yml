@@ -17,6 +17,6 @@ deploy:
   bucket_path: "react-container"
   on:
     branch: master
-  access_key_id: "$AWS-EB-Access"
+  access_key_id: $AWS-EB-ACCESS
   secret_access_key:
-    secure: "$AWS-EB-Secret"
+    secure: $AWS-EB-SECRET
