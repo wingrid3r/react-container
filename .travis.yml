@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run wingrider/react-container npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "react-container"
+  env: "ReactContainer-env"
+  bucket_name: "elasticbeanstalk-us-east-2-676121265370"
+  bucket_path: "react-container"
+  on:
+    branch: master
+  access_key_id: ""$AWS-EB-Access"
+  secret_access_key:
+    secure: "$AWS-EB-Secret"
